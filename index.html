@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Jamzy - discord music bot</title>
+  <link rel='stylesheet' href='https://unpkg.com/augmented-ui@2.0.0/augmented-ui.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.35.0/codemirror.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<img src="logo.svg" alt="logo" class="logo">
+<!-- partial:index.partial.html -->
+<code class="code-container" content="// Jendaaa#9790 💜">
+  <div class="glow-container">
+    <div class="augs" data-augmented-ui></div>
+  </div>
+  <section class="augs bg" data-augmented-ui>
+    <button class="dots" onclick="changeMode()" title="change mode"></button>
+    <input value="Jamzy.jar">
+    <div class="code highcontrast-dark">
+      <textarea id="code">
+@Jamzy discord-music-bot(
+
+  @Jamzy properties {
+    default-prefix: "-";
+    Supported-platforms: "Youtube, Spotify, Soundcloud, direct links";
+    Livestream-support: true;
+  } 
+  @Jamzy Basic-commands {
+    play-music: "-play <title|URL|subcommand>";
+    vote-skip-song: "-skip";
+    show-current-queue: "-queue [pagenum]";
+  }
+
+  @Jamzy Music-commands {
+    currently-playing-song: "-np";
+    remove-song(queue): "-remove <position|ALL>";
+    show-lyrics: "-lyrics [song name]";
+    shuffle-queue: "-shuffle";
+    search-Youtube: "-search <query>";
+    search-Soundclound: "-scsearch <query>";
+    show-available-playlists: "-playlists";
+  }
+
+  @Jamzy DJ-commands {
+    remove-all-songs-by-user-from-queue: "-forceremove <user>";
+    force-skip-song: "-forcesikp";
+    move-track-in-queue: "-movetrack <from> <to>";
+    pause-song: "-pause";
+    add-next-song: "-playnext <title|URL>";
+    repeat-song/s: "-repeat [off|all|single]";
+    skip-to-song: "-skipto <position>";
+    stop-song+clear-queue: "-stop";
+    set-or-see-volume: "-volume [0-150]";
+  }
+
+  @Jamzy Admin-commands {
+    set-custom-prefix: "-prefix <prefix|NONE>";
+    set-DJ-permitions-to-role: "-setdj <rolename|NONE>";
+    set-server-skip-percentage: "-setskip <0 - 100>";
+    set-Jamzy-text-channel: "-settc <channel|NONE>";
+    set-Jamzy-voice-channel: "-setvc <channel|NONE>";
+  }
+)
+      </textarea>
+    </div>
+  </section>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/javascript/javascript.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/css/css.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/addon/scroll/simplescrollbars.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
